@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="soc_top" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1663252114"/>
-    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1663252114"/>
-    <Generation Name="SIMULATION" State="RESET" Timestamp="1663252114"/>
-    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1663252114"/>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1663259654"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1663259654"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1663259654"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1663259654"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/soc_top_mycpu_wrapper_0_0/soc_top_mycpu_wrapper_0_0.xci" Type="IP">
         <Instance HierarchyPath="mycpu_wrapper_0"/>
@@ -39,14 +39,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/soc_top_axi_clock_converter_1_0/soc_top_axi_clock_converter_1_0.xci" Type="IP">
-        <Instance HierarchyPath="axi_clock_converter_1"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip/soc_top_xlconstant_1_1/soc_top_xlconstant_1_1.xci" Type="IP">
         <Instance HierarchyPath="const_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -57,22 +49,6 @@
       </File>
       <File Name="ip/soc_top_confreg_0_0/soc_top_confreg_0_0.xci" Type="IP">
         <Instance HierarchyPath="confreg_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/soc_top_vio_0_0/soc_top_vio_0_0.xci" Type="IP">
-        <Instance HierarchyPath="vio_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/soc_top_util_vector_logic_0_0/soc_top_util_vector_logic_0_0.xci" Type="IP">
-        <Instance HierarchyPath="util_vector_logic_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -143,8 +119,16 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/soc_top_axi_clock_converter_0_0/soc_top_axi_clock_converter_0_0.xci" Type="IP">
-        <Instance HierarchyPath="axi_clock_converter_0"/>
+      <File Name="ip/soc_top_axi_clock_converter_3_0/soc_top_axi_clock_converter_3_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_clock_converter_3"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/soc_top_util_vector_logic_0_1/soc_top_util_vector_logic_0_1.xci" Type="IP">
+        <Instance HierarchyPath="util_vector_logic_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

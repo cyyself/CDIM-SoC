@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Thu Sep 15 22:19:20 2022
+//Date        : Fri Sep 16 00:19:30 2022
 //Host        : cyy-pc running 64-bit Debian GNU/Linux bookworm/sid
 //Command     : generate_target soc_top_wrapper.bd
 //Design      : soc_top_wrapper
@@ -39,7 +39,8 @@ module soc_top_wrapper
     mtxd_0,
     mtxen_0,
     mtxerr_0,
-    phy_rstn);
+    phy_rstn,
+    resetn);
   output [12:0]DDR3_0_addr;
   output [2:0]DDR3_0_ba;
   output DDR3_0_cas_n;
@@ -70,6 +71,7 @@ module soc_top_wrapper
   output mtxen_0;
   output [0:0]mtxerr_0;
   output phy_rstn;
+  input resetn;
 
   wire [12:0]DDR3_0_addr;
   wire [2:0]DDR3_0_ba;
@@ -104,6 +106,7 @@ module soc_top_wrapper
   wire mtxen_0;
   wire [0:0]mtxerr_0;
   wire phy_rstn;
+  wire resetn;
 
   IOBUF MDIO_0_mdio_iobuf
        (.I(MDIO_0_mdio_o),
@@ -142,5 +145,6 @@ module soc_top_wrapper
         .mtxd_0(mtxd_0),
         .mtxen_0(mtxen_0),
         .mtxerr_0(mtxerr_0),
-        .phy_rstn(phy_rstn));
+        .phy_rstn(phy_rstn),
+        .resetn(resetn));
 endmodule
