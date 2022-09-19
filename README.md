@@ -4,11 +4,11 @@ SoC for CQU Dual Issue Machine
 
 ## Board
 
-NSCSCC Board (7a200t-2)
+[Nexys 4 DDR](https://digilent.com/reference/programmable-logic/nexys-4-ddr/start)
 
 ## Devices on the SoC
 
-- 128M DDR3 MIG
+- 128M DDR2 MIG
 - 256K BRAM for U-Boot
 - AXI Ethernet Lite
 - CONFREG (Used for Real-time Clock)
@@ -25,12 +25,6 @@ NSCSCC Board (7a200t-2)
 [uCore](https://github.com/cyyself/ucore-thumips/tree/cdim_soc)
 
 ## FAQ
-
-- AXI Ethernet Link Down in Linux
-
-    If you program this soc and didn't press the reset from cold, the AXI Ethernet Lite in Linux will show the link down. Although the ethernet seems fine in U-Boot.
-
-    The solution is to press the reset button on the board to reset the ethernet phy and the whole system.
 
 - AXI Ethernet Lite transmit timeout in Linux
 

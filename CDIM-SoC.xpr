@@ -3,11 +3,11 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="44" Path="/home/cyy/nscscc/CDIM-SoC/CDIM-SoC.xpr">
+<Project Version="7" Minor="44" Path="/home/cyy/nscscc/CDIM-SoC-n4ddr/CDIM-SoC.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="7c7052394d884ae5aec2ad77919a17a7"/>
-    <Option Name="Part" Val="xc7a200tfbg676-2"/>
+    <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
     <Option Name="CompiledLibDirModelSim" Val="$PCACHEDIR/compile_simlib/modelsim"/>
@@ -21,7 +21,8 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
+    <Option Name="IPRepoPath" Val="$PSRCDIR/sources_1/imports/mii_to_rmii_v2_0"/>
+    <Option Name="IPOutputRepo" Val="/home/cyy/nscscc/CDIM-SoC/CDIM-SoC.cache/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
@@ -412,9 +413,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="soc_top.bd" FileRelPathName="ip/soc_top_axi_clock_converter_3_0/soc_top_axi_clock_converter_3_0.xci">
-          <Proxy FileSetName="soc_top_axi_clock_converter_3_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="soc_top.bd" FileRelPathName="ip/soc_top_mycpu_wrapper_0_0/soc_top_mycpu_wrapper_0_0.xci">
           <Proxy FileSetName="soc_top_mycpu_wrapper_0_0"/>
         </CompFileExtendedInfo>
@@ -423,9 +421,6 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="soc_top.bd" FileRelPathName="ip/soc_top_axi_ethernetlite_0_0/soc_top_axi_ethernetlite_0_0.xci">
           <Proxy FileSetName="soc_top_axi_ethernetlite_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="soc_top.bd" FileRelPathName="ip/soc_top_mig_7series_0_0/soc_top_mig_7series_0_0.xci">
-          <Proxy FileSetName="soc_top_mig_7series_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="soc_top.bd" FileRelPathName="ip/soc_top_confreg_0_0/soc_top_confreg_0_0.xci">
           <Proxy FileSetName="soc_top_confreg_0_0"/>
@@ -453,6 +448,18 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="soc_top.bd" FileRelPathName="ip/soc_top_axi_protocol_convert_2_0/soc_top_axi_protocol_convert_2_0.xci">
           <Proxy FileSetName="soc_top_axi_protocol_convert_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="soc_top.bd" FileRelPathName="ip/soc_top_axi_clock_converter_3_0/soc_top_axi_clock_converter_3_0.xci">
+          <Proxy FileSetName="soc_top_axi_clock_converter_3_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="soc_top.bd" FileRelPathName="ip/soc_top_util_vector_logic_0_1/soc_top_util_vector_logic_0_1.xci">
+          <Proxy FileSetName="soc_top_util_vector_logic_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="soc_top.bd" FileRelPathName="ip/soc_top_mii_to_rmii_0_0/soc_top_mii_to_rmii_0_0.xci">
+          <Proxy FileSetName="soc_top_mii_to_rmii_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="soc_top.bd" FileRelPathName="ip/soc_top_mig_7series_0_2/soc_top_mig_7series_0_2.xci">
+          <Proxy FileSetName="soc_top_mig_7series_0_2"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/soc_top/hdl/soc_top_wrapper.v">
@@ -510,16 +517,16 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/bd/soc_top/ip/soc_top_mig_7series_0_0/mig_b.prj">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="ScopedToCell" Val="soc_top_mig_7series_0_0"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../u-boot/u-boot.coe">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/soc_top/ip/soc_top_mig_7series_0_2/mig_a.prj">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="ScopedToCell" Val="soc_top_mig_7series_0_2"/>
         </FileInfo>
       </File>
       <Config>
@@ -553,33 +560,63 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
-    <FileSet Name="soc_top_confreg_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_top_confreg_0_0">
-      <Config>
-        <Option Name="TopModule" Val="soc_top_confreg_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="constrs_2" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_2">
-      <File Path="$PSRCDIR/constrs_2/new/nscscc_board.xdc">
+      <File Path="$PSRCDIR/constrs_2/new/n4ddr.xdc">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
       <Config>
-        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_2/new/nscscc_board.xdc"/>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_2/new/n4ddr.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
-    <FileSet Name="soc_top_apb_uart_wrapper_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_top_apb_uart_wrapper_0_0">
+    <FileSet Name="soc_top_util_vector_logic_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_top_util_vector_logic_0_1">
       <Config>
-        <Option Name="TopModule" Val="soc_top_apb_uart_wrapper_0_0"/>
+        <Option Name="TopModule" Val="soc_top_util_vector_logic_0_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="soc_top_axi_intc_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_top_axi_intc_0_0">
+      <Config>
+        <Option Name="TopModule" Val="soc_top_axi_intc_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="soc_top_axi_protocol_convert_0_4" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_top_axi_protocol_convert_0_4">
+      <Config>
+        <Option Name="TopModule" Val="soc_top_axi_protocol_convert_0_4"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="soc_top_axi_clock_converter_3_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_top_axi_clock_converter_3_0">
+      <Config>
+        <Option Name="TopModule" Val="soc_top_axi_clock_converter_3_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="soc_top_axi_crossbar_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_top_axi_crossbar_0_1">
+      <Config>
+        <Option Name="TopModule" Val="soc_top_axi_crossbar_0_1"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
     <FileSet Name="soc_top_blk_mem_gen_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_top_blk_mem_gen_0_0">
       <Config>
         <Option Name="TopModule" Val="soc_top_blk_mem_gen_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="soc_top_axi_protocol_convert_2_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_top_axi_protocol_convert_2_0">
+      <Config>
+        <Option Name="TopModule" Val="soc_top_axi_protocol_convert_2_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="soc_top_axi_protocol_convert_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_top_axi_protocol_convert_1_0">
+      <Config>
+        <Option Name="TopModule" Val="soc_top_axi_protocol_convert_1_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -601,15 +638,15 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="soc_top_mig_7series_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_top_mig_7series_0_0">
+    <FileSet Name="soc_top_confreg_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_top_confreg_0_0">
       <Config>
-        <Option Name="TopModule" Val="soc_top_mig_7series_0_0"/>
+        <Option Name="TopModule" Val="soc_top_confreg_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="soc_top_axi_crossbar_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_top_axi_crossbar_0_1">
+    <FileSet Name="soc_top_apb_uart_wrapper_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_top_apb_uart_wrapper_0_0">
       <Config>
-        <Option Name="TopModule" Val="soc_top_axi_crossbar_0_1"/>
+        <Option Name="TopModule" Val="soc_top_apb_uart_wrapper_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -619,33 +656,15 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="soc_top_axi_protocol_convert_2_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_top_axi_protocol_convert_2_0">
+    <FileSet Name="soc_top_mii_to_rmii_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_top_mii_to_rmii_0_0">
       <Config>
-        <Option Name="TopModule" Val="soc_top_axi_protocol_convert_2_0"/>
+        <Option Name="TopModule" Val="soc_top_mii_to_rmii_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="soc_top_axi_intc_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_top_axi_intc_0_0">
+    <FileSet Name="soc_top_mig_7series_0_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_top_mig_7series_0_2">
       <Config>
-        <Option Name="TopModule" Val="soc_top_axi_intc_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="soc_top_axi_protocol_convert_0_4" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_top_axi_protocol_convert_0_4">
-      <Config>
-        <Option Name="TopModule" Val="soc_top_axi_protocol_convert_0_4"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="soc_top_axi_protocol_convert_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_top_axi_protocol_convert_1_0">
-      <Config>
-        <Option Name="TopModule" Val="soc_top_axi_protocol_convert_1_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="soc_top_axi_clock_converter_3_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_top_axi_clock_converter_3_0">
-      <Config>
-        <Option Name="TopModule" Val="soc_top_axi_clock_converter_3_0"/>
+        <Option Name="TopModule" Val="soc_top_mig_7series_0_2"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -675,7 +694,7 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="11">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a200tfbg676-2" ConstrsSet="constrs_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -684,7 +703,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_confreg_0_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_confreg_0_0" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_confreg_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
+    <Run Id="soc_top_util_vector_logic_0_1_synth_1" Type="Ft3:Synth" SrcSet="soc_top_util_vector_logic_0_1" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_util_vector_logic_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -693,7 +712,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_apb_uart_wrapper_0_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_apb_uart_wrapper_0_0" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_apb_uart_wrapper_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
+    <Run Id="soc_top_axi_intc_0_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_axi_intc_0_0" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_axi_intc_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -702,7 +721,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_blk_mem_gen_0_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_blk_mem_gen_0_0" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_blk_mem_gen_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
+    <Run Id="soc_top_axi_protocol_convert_0_4_synth_1" Type="Ft3:Synth" SrcSet="soc_top_axi_protocol_convert_0_4" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_axi_protocol_convert_0_4" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -711,7 +730,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_axi_bram_ctrl_0_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_axi_bram_ctrl_0_0" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_axi_bram_ctrl_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
+    <Run Id="soc_top_axi_clock_converter_3_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_axi_clock_converter_3_0" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_axi_clock_converter_3_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -720,7 +739,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_clk_wiz_0_0" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_clk_wiz_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
+    <Run Id="soc_top_axi_crossbar_0_1_synth_1" Type="Ft3:Synth" SrcSet="soc_top_axi_crossbar_0_1" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_axi_crossbar_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -729,7 +748,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_axi_ethernetlite_0_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_axi_ethernetlite_0_0" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_axi_ethernetlite_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
+    <Run Id="soc_top_blk_mem_gen_0_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_blk_mem_gen_0_0" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_blk_mem_gen_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -738,7 +757,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_mig_7series_0_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_mig_7series_0_0" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_mig_7series_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
+    <Run Id="soc_top_axi_protocol_convert_2_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_axi_protocol_convert_2_0" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_axi_protocol_convert_2_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -747,7 +766,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_axi_crossbar_0_1_synth_1" Type="Ft3:Synth" SrcSet="soc_top_axi_crossbar_0_1" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_axi_crossbar_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
+    <Run Id="soc_top_axi_protocol_convert_1_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_axi_protocol_convert_1_0" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_axi_protocol_convert_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -756,7 +775,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_mycpu_wrapper_0_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_mycpu_wrapper_0_0" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_mycpu_wrapper_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
+    <Run Id="soc_top_axi_bram_ctrl_0_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_axi_bram_ctrl_0_0" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_axi_bram_ctrl_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -765,7 +784,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_axi_protocol_convert_2_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_axi_protocol_convert_2_0" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_axi_protocol_convert_2_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
+    <Run Id="soc_top_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_clk_wiz_0_0" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_clk_wiz_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -774,7 +793,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_axi_intc_0_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_axi_intc_0_0" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_axi_intc_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
+    <Run Id="soc_top_axi_ethernetlite_0_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_axi_ethernetlite_0_0" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_axi_ethernetlite_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -783,7 +802,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_axi_protocol_convert_0_4_synth_1" Type="Ft3:Synth" SrcSet="soc_top_axi_protocol_convert_0_4" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_axi_protocol_convert_0_4" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
+    <Run Id="soc_top_confreg_0_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_confreg_0_0" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_confreg_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -792,7 +811,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_axi_protocol_convert_1_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_axi_protocol_convert_1_0" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_axi_protocol_convert_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
+    <Run Id="soc_top_apb_uart_wrapper_0_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_apb_uart_wrapper_0_0" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_apb_uart_wrapper_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -801,7 +820,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_axi_clock_converter_3_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_axi_clock_converter_3_0" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_axi_clock_converter_3_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
+    <Run Id="soc_top_mycpu_wrapper_0_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_mycpu_wrapper_0_0" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_mycpu_wrapper_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -810,7 +829,25 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="constrs_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
+    <Run Id="soc_top_mii_to_rmii_0_0_synth_1" Type="Ft3:Synth" SrcSet="soc_top_mii_to_rmii_0_0" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_mii_to_rmii_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="soc_top_mig_7series_0_2_synth_1" Type="Ft3:Synth" SrcSet="soc_top_mig_7series_0_2" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_mig_7series_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -827,7 +864,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_confreg_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_confreg_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_confreg_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="soc_top_util_vector_logic_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_util_vector_logic_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_util_vector_logic_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -844,7 +881,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_apb_uart_wrapper_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_apb_uart_wrapper_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_apb_uart_wrapper_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="soc_top_axi_intc_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_axi_intc_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_axi_intc_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -861,7 +898,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_blk_mem_gen_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_blk_mem_gen_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_blk_mem_gen_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="soc_top_axi_protocol_convert_0_4_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_axi_protocol_convert_0_4" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_axi_protocol_convert_0_4_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -878,7 +915,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_axi_bram_ctrl_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_axi_bram_ctrl_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_axi_bram_ctrl_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="soc_top_axi_clock_converter_3_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_axi_clock_converter_3_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_axi_clock_converter_3_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -895,7 +932,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_clk_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_clk_wiz_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_clk_wiz_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="soc_top_axi_crossbar_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_axi_crossbar_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_axi_crossbar_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -912,7 +949,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_axi_ethernetlite_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_axi_ethernetlite_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_axi_ethernetlite_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="soc_top_blk_mem_gen_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_blk_mem_gen_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_blk_mem_gen_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -929,7 +966,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_mig_7series_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_mig_7series_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_mig_7series_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="soc_top_axi_protocol_convert_2_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_axi_protocol_convert_2_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_axi_protocol_convert_2_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -946,7 +983,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_axi_crossbar_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_axi_crossbar_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_axi_crossbar_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="soc_top_axi_protocol_convert_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_axi_protocol_convert_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_axi_protocol_convert_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -963,7 +1000,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_mycpu_wrapper_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_mycpu_wrapper_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_mycpu_wrapper_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="soc_top_axi_bram_ctrl_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_axi_bram_ctrl_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_axi_bram_ctrl_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -980,7 +1017,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_axi_protocol_convert_2_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_axi_protocol_convert_2_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_axi_protocol_convert_2_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="soc_top_clk_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_clk_wiz_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_clk_wiz_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -997,7 +1034,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_axi_intc_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_axi_intc_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_axi_intc_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="soc_top_axi_ethernetlite_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_axi_ethernetlite_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_axi_ethernetlite_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -1014,7 +1051,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_axi_protocol_convert_0_4_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_axi_protocol_convert_0_4" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_axi_protocol_convert_0_4_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="soc_top_confreg_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_confreg_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_confreg_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -1031,7 +1068,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_axi_protocol_convert_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_axi_protocol_convert_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_axi_protocol_convert_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="soc_top_apb_uart_wrapper_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_apb_uart_wrapper_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_apb_uart_wrapper_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -1048,7 +1085,41 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_top_axi_clock_converter_3_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="soc_top_axi_clock_converter_3_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_axi_clock_converter_3_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="soc_top_mycpu_wrapper_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_mycpu_wrapper_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_mycpu_wrapper_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="soc_top_mii_to_rmii_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_mii_to_rmii_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_mii_to_rmii_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="soc_top_mig_7series_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="soc_top_mig_7series_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_top_mig_7series_0_2_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>

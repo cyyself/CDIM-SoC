@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Fri Sep 16 00:53:37 2022
+//Date        : Mon Sep 19 22:04:55 2022
 //Host        : cyy-pc running 64-bit Debian GNU/Linux bookworm/sid
 //Command     : generate_target soc_top_wrapper.bd
 //Design      : soc_top_wrapper
@@ -10,99 +10,96 @@
 `timescale 1 ps / 1 ps
 
 module soc_top_wrapper
-   (DDR3_0_addr,
-    DDR3_0_ba,
-    DDR3_0_cas_n,
-    DDR3_0_ck_n,
-    DDR3_0_ck_p,
-    DDR3_0_cke,
-    DDR3_0_dm,
-    DDR3_0_dq,
-    DDR3_0_dqs_n,
-    DDR3_0_dqs_p,
-    DDR3_0_odt,
-    DDR3_0_ras_n,
-    DDR3_0_reset_n,
-    DDR3_0_we_n,
+   (DDR2_0_addr,
+    DDR2_0_ba,
+    DDR2_0_cas_n,
+    DDR2_0_ck_n,
+    DDR2_0_ck_p,
+    DDR2_0_cke,
+    DDR2_0_cs_n,
+    DDR2_0_dm,
+    DDR2_0_dq,
+    DDR2_0_dqs_n,
+    DDR2_0_dqs_p,
+    DDR2_0_odt,
+    DDR2_0_ras_n,
+    DDR2_0_we_n,
     MDIO_0_mdc,
     MDIO_0_mdio_io,
-    MII_0_col,
-    MII_0_crs,
-    MII_0_rst_n,
-    MII_0_rx_clk,
-    MII_0_rx_dv,
-    MII_0_rx_er,
-    MII_0_rxd,
-    MII_0_tx_clk,
-    MII_0_tx_en,
-    MII_0_txd,
+    RMII_PHY_M_0_clk,
+    RMII_PHY_M_0_crs_dv,
+    RMII_PHY_M_0_phy_rst_n,
+    RMII_PHY_M_0_rx_er,
+    RMII_PHY_M_0_rxd,
+    RMII_PHY_M_0_tx_en,
+    RMII_PHY_M_0_txd,
     UART_RX,
     UART_TX,
     clk,
+    init_calib_complete_0,
+    mmcm_locked_0,
     resetn);
-  output [12:0]DDR3_0_addr;
-  output [2:0]DDR3_0_ba;
-  output DDR3_0_cas_n;
-  output [0:0]DDR3_0_ck_n;
-  output [0:0]DDR3_0_ck_p;
-  output [0:0]DDR3_0_cke;
-  output [1:0]DDR3_0_dm;
-  inout [15:0]DDR3_0_dq;
-  inout [1:0]DDR3_0_dqs_n;
-  inout [1:0]DDR3_0_dqs_p;
-  output [0:0]DDR3_0_odt;
-  output DDR3_0_ras_n;
-  output DDR3_0_reset_n;
-  output DDR3_0_we_n;
+  output [12:0]DDR2_0_addr;
+  output [2:0]DDR2_0_ba;
+  output DDR2_0_cas_n;
+  output [0:0]DDR2_0_ck_n;
+  output [0:0]DDR2_0_ck_p;
+  output [0:0]DDR2_0_cke;
+  output [0:0]DDR2_0_cs_n;
+  output [1:0]DDR2_0_dm;
+  inout [15:0]DDR2_0_dq;
+  inout [1:0]DDR2_0_dqs_n;
+  inout [1:0]DDR2_0_dqs_p;
+  output [0:0]DDR2_0_odt;
+  output DDR2_0_ras_n;
+  output DDR2_0_we_n;
   output MDIO_0_mdc;
   inout MDIO_0_mdio_io;
-  input MII_0_col;
-  input MII_0_crs;
-  output MII_0_rst_n;
-  input MII_0_rx_clk;
-  input MII_0_rx_dv;
-  input MII_0_rx_er;
-  input [3:0]MII_0_rxd;
-  input MII_0_tx_clk;
-  output MII_0_tx_en;
-  output [3:0]MII_0_txd;
+  output RMII_PHY_M_0_clk;
+  input RMII_PHY_M_0_crs_dv;
+  output RMII_PHY_M_0_phy_rst_n;
+  input RMII_PHY_M_0_rx_er;
+  input [1:0]RMII_PHY_M_0_rxd;
+  output RMII_PHY_M_0_tx_en;
+  output [1:0]RMII_PHY_M_0_txd;
   inout UART_RX;
   inout UART_TX;
   input clk;
+  output init_calib_complete_0;
+  output mmcm_locked_0;
   input resetn;
 
-  wire [12:0]DDR3_0_addr;
-  wire [2:0]DDR3_0_ba;
-  wire DDR3_0_cas_n;
-  wire [0:0]DDR3_0_ck_n;
-  wire [0:0]DDR3_0_ck_p;
-  wire [0:0]DDR3_0_cke;
-  wire [1:0]DDR3_0_dm;
-  wire [15:0]DDR3_0_dq;
-  wire [1:0]DDR3_0_dqs_n;
-  wire [1:0]DDR3_0_dqs_p;
-  wire [0:0]DDR3_0_odt;
-  wire DDR3_0_ras_n;
-  wire DDR3_0_reset_n;
-  wire DDR3_0_we_n;
+  wire [12:0]DDR2_0_addr;
+  wire [2:0]DDR2_0_ba;
+  wire DDR2_0_cas_n;
+  wire [0:0]DDR2_0_ck_n;
+  wire [0:0]DDR2_0_ck_p;
+  wire [0:0]DDR2_0_cke;
+  wire [0:0]DDR2_0_cs_n;
+  wire [1:0]DDR2_0_dm;
+  wire [15:0]DDR2_0_dq;
+  wire [1:0]DDR2_0_dqs_n;
+  wire [1:0]DDR2_0_dqs_p;
+  wire [0:0]DDR2_0_odt;
+  wire DDR2_0_ras_n;
+  wire DDR2_0_we_n;
   wire MDIO_0_mdc;
   wire MDIO_0_mdio_i;
   wire MDIO_0_mdio_io;
   wire MDIO_0_mdio_o;
   wire MDIO_0_mdio_t;
-  wire MII_0_col;
-  wire MII_0_crs;
-  wire MII_0_rst_n;
-  wire MII_0_rx_clk;
-  wire MII_0_rx_dv;
-  wire MII_0_rx_er;
-  wire [3:0]MII_0_rxd;
-  wire MII_0_tx_clk;
-  wire MII_0_tx_en;
-  wire [3:0]MII_0_txd;
+  wire RMII_PHY_M_0_clk;
+  wire RMII_PHY_M_0_crs_dv;
+  wire RMII_PHY_M_0_phy_rst_n;
+  wire RMII_PHY_M_0_rx_er;
+  wire [1:0]RMII_PHY_M_0_rxd;
+  wire RMII_PHY_M_0_tx_en;
+  wire [1:0]RMII_PHY_M_0_txd;
   wire UART_RX;
   wire UART_TX;
   wire clk;
+  wire init_calib_complete_0;
+  wire mmcm_locked_0;
   wire resetn;
 
   IOBUF MDIO_0_mdio_iobuf
@@ -111,36 +108,35 @@ module soc_top_wrapper
         .O(MDIO_0_mdio_i),
         .T(MDIO_0_mdio_t));
   soc_top soc_top_i
-       (.DDR3_0_addr(DDR3_0_addr),
-        .DDR3_0_ba(DDR3_0_ba),
-        .DDR3_0_cas_n(DDR3_0_cas_n),
-        .DDR3_0_ck_n(DDR3_0_ck_n),
-        .DDR3_0_ck_p(DDR3_0_ck_p),
-        .DDR3_0_cke(DDR3_0_cke),
-        .DDR3_0_dm(DDR3_0_dm),
-        .DDR3_0_dq(DDR3_0_dq),
-        .DDR3_0_dqs_n(DDR3_0_dqs_n),
-        .DDR3_0_dqs_p(DDR3_0_dqs_p),
-        .DDR3_0_odt(DDR3_0_odt),
-        .DDR3_0_ras_n(DDR3_0_ras_n),
-        .DDR3_0_reset_n(DDR3_0_reset_n),
-        .DDR3_0_we_n(DDR3_0_we_n),
+       (.DDR2_0_addr(DDR2_0_addr),
+        .DDR2_0_ba(DDR2_0_ba),
+        .DDR2_0_cas_n(DDR2_0_cas_n),
+        .DDR2_0_ck_n(DDR2_0_ck_n),
+        .DDR2_0_ck_p(DDR2_0_ck_p),
+        .DDR2_0_cke(DDR2_0_cke),
+        .DDR2_0_cs_n(DDR2_0_cs_n),
+        .DDR2_0_dm(DDR2_0_dm),
+        .DDR2_0_dq(DDR2_0_dq),
+        .DDR2_0_dqs_n(DDR2_0_dqs_n),
+        .DDR2_0_dqs_p(DDR2_0_dqs_p),
+        .DDR2_0_odt(DDR2_0_odt),
+        .DDR2_0_ras_n(DDR2_0_ras_n),
+        .DDR2_0_we_n(DDR2_0_we_n),
         .MDIO_0_mdc(MDIO_0_mdc),
         .MDIO_0_mdio_i(MDIO_0_mdio_i),
         .MDIO_0_mdio_o(MDIO_0_mdio_o),
         .MDIO_0_mdio_t(MDIO_0_mdio_t),
-        .MII_0_col(MII_0_col),
-        .MII_0_crs(MII_0_crs),
-        .MII_0_rst_n(MII_0_rst_n),
-        .MII_0_rx_clk(MII_0_rx_clk),
-        .MII_0_rx_dv(MII_0_rx_dv),
-        .MII_0_rx_er(MII_0_rx_er),
-        .MII_0_rxd(MII_0_rxd),
-        .MII_0_tx_clk(MII_0_tx_clk),
-        .MII_0_tx_en(MII_0_tx_en),
-        .MII_0_txd(MII_0_txd),
+        .RMII_PHY_M_0_clk(RMII_PHY_M_0_clk),
+        .RMII_PHY_M_0_crs_dv(RMII_PHY_M_0_crs_dv),
+        .RMII_PHY_M_0_phy_rst_n(RMII_PHY_M_0_phy_rst_n),
+        .RMII_PHY_M_0_rx_er(RMII_PHY_M_0_rx_er),
+        .RMII_PHY_M_0_rxd(RMII_PHY_M_0_rxd),
+        .RMII_PHY_M_0_tx_en(RMII_PHY_M_0_tx_en),
+        .RMII_PHY_M_0_txd(RMII_PHY_M_0_txd),
         .UART_RX(UART_RX),
         .UART_TX(UART_TX),
         .clk(clk),
+        .init_calib_complete_0(init_calib_complete_0),
+        .mmcm_locked_0(mmcm_locked_0),
         .resetn(resetn));
 endmodule
