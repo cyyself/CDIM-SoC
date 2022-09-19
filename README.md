@@ -4,7 +4,9 @@ SoC for CQU Dual Issue Machine
 
 ## Board
 
-NSCSCC Board (7a200t-2)
+- NSCSCC Board (7a200t-2)
+
+- [Nexys 4 DDR](https://github.com/cyyself/CDIM-SoC/tree/n4ddr_porting)
 
 ## Devices on the SoC
 
