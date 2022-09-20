@@ -1,72 +1,84 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"250,10",
+   "Default View_ScaleFactor":"0.489503",
+   "Default View_TopLeft":"-94,-88",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 TLS
 #  -string -flagsOSRD
-preplace port MDIO_0 -pg 1 -lvl 8 -x 2480 -y 760 -defaultsOSRD
-preplace port RMII_PHY_M_0 -pg 1 -lvl 8 -x 2480 -y 670 -defaultsOSRD
-preplace port DDR2_0 -pg 1 -lvl 8 -x 2480 -y 110 -defaultsOSRD
-preplace port clk -pg 1 -lvl 0 -x -110 -y 630 -defaultsOSRD
-preplace port UART_TX -pg 1 -lvl 8 -x 2480 -y 300 -defaultsOSRD
-preplace port UART_RX -pg 1 -lvl 8 -x 2480 -y 320 -defaultsOSRD
-preplace port resetn -pg 1 -lvl 0 -x -110 -y 610 -defaultsOSRD
-preplace port RMII_PHY_M_0_phy_rst_n -pg 1 -lvl 8 -x 2480 -y 590 -defaultsOSRD
-preplace port RMII_PHY_M_0_clk -pg 1 -lvl 8 -x 2480 -y 740 -defaultsOSRD
-preplace port init_calib_complete_0 -pg 1 -lvl 8 -x 2480 -y 190 -defaultsOSRD
-preplace port mmcm_locked_0 -pg 1 -lvl 8 -x 2480 -y 170 -defaultsOSRD
-preplace inst apb_uart_wrapper_0 -pg 1 -lvl 7 -x 2290 -y 320 -defaultsOSRD
-preplace inst axi_bram_ctrl_0 -pg 1 -lvl 6 -x 1930 -y 850 -defaultsOSRD
-preplace inst axi_clock_converter_3 -pg 1 -lvl 3 -x 960 -y 230 -defaultsOSRD
-preplace inst axi_crossbar_0 -pg 1 -lvl 5 -x 1590 -y 270 -defaultsOSRD
-preplace inst axi_ethernetlite_0 -pg 1 -lvl 6 -x 1930 -y 680 -defaultsOSRD
-preplace inst axi_intc_0 -pg 1 -lvl 7 -x 2290 -y 500 -defaultsOSRD
-preplace inst axi_protocol_convert_0 -pg 1 -lvl 6 -x 1930 -y 300 -defaultsOSRD
-preplace inst axi_protocol_convert_1 -pg 1 -lvl 4 -x 1290 -y 250 -defaultsOSRD
-preplace inst axi_protocol_convert_2 -pg 1 -lvl 6 -x 1930 -y 490 -defaultsOSRD
-preplace inst blk_mem_gen_0 -pg 1 -lvl 7 -x 2290 -y 850 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 270 -y 620 -defaultsOSRD
-preplace inst confreg_0 -pg 1 -lvl 6 -x 1930 -y 160 -defaultsOSRD
-preplace inst mycpu_wrapper_0 -pg 1 -lvl 2 -x 590 -y 480 -defaultsOSRD
-preplace inst util_vector_logic_0 -pg 1 -lvl 2 -x 590 -y 280 -defaultsOSRD
-preplace inst mii_to_rmii_0 -pg 1 -lvl 7 -x 2290 -y 670 -defaultsOSRD
-preplace inst mig_7series_0 -pg 1 -lvl 7 -x 2290 -y 150 -defaultsOSRD
-preplace netloc clk_1 1 0 1 NJ 630
-preplace netloc Net1 1 7 1 NJ 300
-preplace netloc Net2 1 7 1 NJ 320
-preplace netloc apb_uart_wrapper_0_UART_int 1 1 7 400 20 NJ 20 NJ 20 NJ 20 NJ 20 NJ 20 2460
-preplace netloc axi_ethernetlite_0_ip2intc_irpt 1 6 1 2140 530n
-preplace netloc axi_intc_0_irq 1 1 7 410 30 NJ 30 NJ 30 NJ 30 NJ 30 NJ 30 2440
-preplace netloc mig_7series_0_ui_clk 1 2 6 790 130 1130 150 1450 150 1770 50 2110 40 2430
-preplace netloc util_vector_logic_0_Res 1 2 5 760 120 1140 160 1440 160 1740 380 2120
-preplace netloc clk_wiz_0_locked 1 1 6 390 220 770 40 NJ 40 NJ 40 NJ 40 2090
-preplace netloc clk_wiz_0_cpu_clk 1 1 2 380 210 NJ
-preplace netloc resetn_1 1 0 1 NJ 610
-preplace netloc axi_ethernetlite_0_phy_rst_n 1 6 2 2080J 400 2460J
-preplace netloc clk_wiz_0_mac_clk 1 1 7 NJ 650 NJ 650 NJ 650 NJ 650 1780J 590 2130 410 2450J
-preplace netloc clk_wiz_0_mig_clk 1 1 6 370 60 NJ 60 NJ 60 NJ 60 NJ 60 2140J
-preplace netloc mig_7series_0_ui_clk_sync_rst 1 1 7 420 70 NJ 70 NJ 70 NJ 70 NJ 70 2130J 50 2420
-preplace netloc mig_7series_0_init_calib_complete 1 7 1 NJ 190
-preplace netloc mig_7series_0_mmcm_locked 1 7 1 NJ 170
-preplace netloc axi_clock_converter_3_M_AXI 1 3 1 N 230
-preplace netloc axi_protocol_convert_2_M_AXI 1 6 1 2100 470n
-preplace netloc mycpu_wrapper_0_MAXI 1 2 1 780 190n
-preplace netloc axi_ethernetlite_0_MDIO 1 6 2 2150J 590 2430J
-preplace netloc axi_crossbar_0_M05_AXI 1 5 1 1730 320n
-preplace netloc axi_crossbar_0_M04_AXI 1 5 1 1760 300n
-preplace netloc axi_crossbar_0_M03_AXI 1 5 1 N 280
-preplace netloc axi_crossbar_0_M02_AXI 1 5 1 1760 140n
-preplace netloc axi_crossbar_0_M01_AXI 1 5 1 1750 240n
-preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 6 1 NJ 850
-preplace netloc axi_protocol_convert_1_M_AXI 1 4 1 N 250
-preplace netloc axi_protocol_convert_0_M_AXI 1 6 1 N 300
-preplace netloc axi_ethernetlite_0_MII 1 6 1 N 650
-preplace netloc mii_to_rmii_0_RMII_PHY_M 1 7 1 NJ 670
-preplace netloc axi_crossbar_0_M00_AXI 1 5 2 1730J 80 2130
-preplace netloc mig_7series_0_DDR2 1 7 1 NJ 110
-levelinfo -pg 1 -110 270 590 960 1290 1590 1930 2290 2480
-pagesize -pg 1 -db -bbox -sgen -210 -150 2710 1630
+preplace port MDIO_0 -pg 1 -lvl 9 -x 2680 -y 450 -defaultsOSRD
+preplace port RMII_PHY_M_0 -pg 1 -lvl 9 -x 2680 -y 690 -defaultsOSRD
+preplace port DDR2_0 -pg 1 -lvl 9 -x 2680 -y 70 -defaultsOSRD
+preplace port clk -pg 1 -lvl 0 -x 0 -y 380 -defaultsOSRD
+preplace port UART_TX -pg 1 -lvl 9 -x 2680 -y 510 -defaultsOSRD
+preplace port UART_RX -pg 1 -lvl 9 -x 2680 -y 530 -defaultsOSRD
+preplace port resetn -pg 1 -lvl 0 -x 0 -y 360 -defaultsOSRD
+preplace port RMII_PHY_M_0_phy_rst_n -pg 1 -lvl 9 -x 2680 -y 430 -defaultsOSRD
+preplace port RMII_PHY_M_0_clk -pg 1 -lvl 9 -x 2680 -y 610 -defaultsOSRD
+preplace port init_calib_complete_0 -pg 1 -lvl 9 -x 2680 -y 150 -defaultsOSRD
+preplace port mmcm_locked_0 -pg 1 -lvl 9 -x 2680 -y 130 -defaultsOSRD
+preplace port SPI_CS -pg 1 -lvl 9 -x 2680 -y 810 -defaultsOSRD
+preplace port SPI_MISO -pg 1 -lvl 9 -x 2680 -y 830 -defaultsOSRD
+preplace port SPI_MOSI -pg 1 -lvl 9 -x 2680 -y 850 -defaultsOSRD
+preplace inst apb_uart_wrapper_0 -pg 1 -lvl 8 -x 2520 -y 530 -defaultsOSRD
+preplace inst axi_clock_converter_3 -pg 1 -lvl 3 -x 790 -y 330 -defaultsOSRD
+preplace inst axi_crossbar_0 -pg 1 -lvl 5 -x 1440 -y 370 -defaultsOSRD
+preplace inst axi_ethernetlite_0 -pg 1 -lvl 7 -x 2160 -y 440 -defaultsOSRD
+preplace inst axi_intc_0 -pg 1 -lvl 7 -x 2160 -y 260 -defaultsOSRD
+preplace inst axi_protocol_convert_0 -pg 1 -lvl 7 -x 2160 -y 610 -defaultsOSRD
+preplace inst axi_protocol_convert_1 -pg 1 -lvl 4 -x 1130 -y 350 -defaultsOSRD
+preplace inst axi_protocol_convert_2 -pg 1 -lvl 6 -x 1780 -y 340 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 120 -y 370 -defaultsOSRD
+preplace inst confreg_0 -pg 1 -lvl 6 -x 1780 -y 560 -defaultsOSRD
+preplace inst mycpu_wrapper_0 -pg 1 -lvl 2 -x 420 -y 340 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 2 -x 420 -y 170 -defaultsOSRD
+preplace inst mii_to_rmii_0 -pg 1 -lvl 8 -x 2520 -y 690 -defaultsOSRD
+preplace inst mig_7series_0 -pg 1 -lvl 8 -x 2520 -y 110 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 6 -x 1780 -y 170 -defaultsOSRD
+preplace inst axi_protocol_convert_3 -pg 1 -lvl 6 -x 1780 -y 760 -defaultsOSRD
+preplace inst axi_clock_converter_0 -pg 1 -lvl 7 -x 2160 -y 800 -defaultsOSRD
+preplace inst godson_spi_wrapper_0 -pg 1 -lvl 8 -x 2520 -y 840 -defaultsOSRD
+preplace netloc clk_1 1 0 1 NJ 380
+preplace netloc Net1 1 8 1 NJ 510
+preplace netloc Net2 1 8 1 NJ 530
+preplace netloc apb_uart_wrapper_0_UART_int 1 1 8 250 230 NJ 230 980J 430 1280J 260 NJ 260 1970J 350 NJ 350 2650
+preplace netloc axi_intc_0_irq 1 1 7 240 110 NJ 110 NJ 110 NJ 110 1590J 250 1940J 160 2330
+preplace netloc mig_7series_0_ui_clk 1 2 7 620 430 970 440 1290 480 1590 640 1980 170 2380 210 2660
+preplace netloc util_vector_logic_0_Res 1 2 6 600 220 960 450 1300 490 1630 650 1990 530 2330J
+preplace netloc clk_wiz_0_locked 1 1 7 250 460 610 680 NJ 680 NJ 680 NJ 680 1930 690 2370
+preplace netloc clk_wiz_0_cpu_clk 1 1 2 240 450 590J
+preplace netloc resetn_1 1 0 1 NJ 360
+preplace netloc axi_ethernetlite_0_phy_rst_n 1 7 2 NJ 430 NJ
+preplace netloc clk_wiz_0_mac_clk 1 1 8 230 660 NJ 660 NJ 660 NJ 660 NJ 660 1970J 700 2390 610 NJ
+preplace netloc clk_wiz_0_mig_clk 1 1 7 220J 100 NJ 100 NJ 100 NJ 100 1590J 90 NJ 90 2390
+preplace netloc mig_7series_0_ui_clk_sync_rst 1 1 8 230 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 2660
+preplace netloc mig_7series_0_init_calib_complete 1 8 1 NJ 150
+preplace netloc mig_7series_0_mmcm_locked 1 8 1 NJ 130
+preplace netloc axi_ethernetlite_0_ip2intc_irpt 1 5 3 1620 100 NJ 100 2340
+preplace netloc xlconcat_0_dout 1 6 1 1950 170n
+preplace netloc godson_spi_wrapper_0_inta_o 1 5 4 1620 240 1930J 150 2390J 220 2660
+preplace netloc godson_spi_wrapper_0_SPI_CS 1 8 1 NJ 810
+preplace netloc Net 1 8 1 NJ 830
+preplace netloc Net3 1 8 1 NJ 850
+preplace netloc clk_wiz_0_spi_clk 1 1 7 220 670 NJ 670 NJ 670 NJ 670 NJ 670 1950 900 2390J
+preplace netloc axi_crossbar_0_M04_AXI 1 5 1 1620 320n
+preplace netloc axi_ethernetlite_0_MII 1 7 1 2350 410n
+preplace netloc mig_7series_0_DDR2 1 8 1 NJ 70
+preplace netloc axi_crossbar_0_M00_AXI 1 5 3 1580 80 NJ 80 NJ
+preplace netloc axi_protocol_convert_2_M_AXI 1 6 1 1960 230n
+preplace netloc axi_protocol_convert_1_M_AXI 1 4 1 N 350
+preplace netloc axi_protocol_convert_0_M_AXI 1 7 1 2360 510n
+preplace netloc axi_ethernetlite_0_MDIO 1 7 2 NJ 450 NJ
+preplace netloc axi_crossbar_0_M05_AXI 1 5 2 N 420 NJ
+preplace netloc axi_crossbar_0_M02_AXI 1 5 1 1610 360n
+preplace netloc mycpu_wrapper_0_MAXI 1 2 1 N 290
+preplace netloc axi_clock_converter_3_M_AXI 1 3 1 N 330
+preplace netloc mii_to_rmii_0_RMII_PHY_M 1 8 1 NJ 690
+preplace netloc axi_crossbar_0_M03_AXI 1 5 2 1600 480 1950J
+preplace netloc axi_clock_converter_0_M_AXI 1 7 1 2340 800n
+preplace netloc axi_protocol_convert_3_M_AXI 1 6 1 N 760
+preplace netloc axi_crossbar_0_M01_AXI 1 5 1 1580 340n
+levelinfo -pg 1 0 120 420 790 1130 1440 1780 2160 2520 2680
+pagesize -pg 1 -db -bbox -sgen -100 0 2910 930
 "
 }
 {

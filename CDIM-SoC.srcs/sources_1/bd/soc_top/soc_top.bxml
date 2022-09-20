@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="soc_top" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1663597733"/>
-    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1663597733"/>
-    <Generation Name="SIMULATION" State="RESET" Timestamp="1663597733"/>
-    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1663597733"/>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1663690739"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1663690739"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1663690739"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1663690739"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/soc_top_mycpu_wrapper_0_0/soc_top_mycpu_wrapper_0_0.xci" Type="IP">
         <Instance HierarchyPath="mycpu_wrapper_0"/>
@@ -41,22 +41,6 @@
       </File>
       <File Name="ip/soc_top_apb_uart_wrapper_0_0/soc_top_apb_uart_wrapper_0_0.xci" Type="IP">
         <Instance HierarchyPath="apb_uart_wrapper_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/soc_top_axi_bram_ctrl_0_0/soc_top_axi_bram_ctrl_0_0.xci" Type="IP">
-        <Instance HierarchyPath="axi_bram_ctrl_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/soc_top_blk_mem_gen_0_0/soc_top_blk_mem_gen_0_0.xci" Type="IP">
-        <Instance HierarchyPath="blk_mem_gen_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -129,6 +113,38 @@
       </File>
       <File Name="ip/soc_top_mig_7series_0_2/soc_top_mig_7series_0_2.xci" Type="IP">
         <Instance HierarchyPath="mig_7series_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/soc_top_xlconcat_0_0/soc_top_xlconcat_0_0.xci" Type="IP">
+        <Instance HierarchyPath="xlconcat_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/soc_top_axi_protocol_convert_3_2/soc_top_axi_protocol_convert_3_2.xci" Type="IP">
+        <Instance HierarchyPath="axi_protocol_convert_3"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/soc_top_godson_spi_wrapper_0_0/soc_top_godson_spi_wrapper_0_0.xci" Type="IP">
+        <Instance HierarchyPath="godson_spi_wrapper_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/soc_top_axi_clock_converter_0_0/soc_top_axi_clock_converter_0_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_clock_converter_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

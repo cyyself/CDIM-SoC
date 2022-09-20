@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Mon Sep 19 22:04:55 2022
+//Date        : Wed Sep 21 00:07:46 2022
 //Host        : cyy-pc running 64-bit Debian GNU/Linux bookworm/sid
 //Command     : generate_target soc_top_wrapper.bd
 //Design      : soc_top_wrapper
@@ -33,6 +33,9 @@ module soc_top_wrapper
     RMII_PHY_M_0_rxd,
     RMII_PHY_M_0_tx_en,
     RMII_PHY_M_0_txd,
+    SPI_CS,
+    SPI_MISO,
+    SPI_MOSI,
     UART_RX,
     UART_TX,
     clk,
@@ -62,6 +65,9 @@ module soc_top_wrapper
   input [1:0]RMII_PHY_M_0_rxd;
   output RMII_PHY_M_0_tx_en;
   output [1:0]RMII_PHY_M_0_txd;
+  output SPI_CS;
+  inout SPI_MISO;
+  inout SPI_MOSI;
   inout UART_RX;
   inout UART_TX;
   input clk;
@@ -95,6 +101,9 @@ module soc_top_wrapper
   wire [1:0]RMII_PHY_M_0_rxd;
   wire RMII_PHY_M_0_tx_en;
   wire [1:0]RMII_PHY_M_0_txd;
+  wire SPI_CS;
+  wire SPI_MISO;
+  wire SPI_MOSI;
   wire UART_RX;
   wire UART_TX;
   wire clk;
@@ -133,6 +142,9 @@ module soc_top_wrapper
         .RMII_PHY_M_0_rxd(RMII_PHY_M_0_rxd),
         .RMII_PHY_M_0_tx_en(RMII_PHY_M_0_tx_en),
         .RMII_PHY_M_0_txd(RMII_PHY_M_0_txd),
+        .SPI_CS(SPI_CS),
+        .SPI_MISO(SPI_MISO),
+        .SPI_MOSI(SPI_MOSI),
         .UART_RX(UART_RX),
         .UART_TX(UART_TX),
         .clk(clk),

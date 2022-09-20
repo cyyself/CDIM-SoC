@@ -32,3 +32,25 @@ set_property IOSTANDARD LVCMOS33 [get_ports UART_TX]
 set_property IOSTANDARD LVCMOS33 [get_ports UART_RX]
 set_property IOSTANDARD LVCMOS33 [get_ports mmcm_locked_0]
 set_property IOSTANDARD LVCMOS33 [get_ports init_calib_complete_0]
+
+
+#spi flash
+set_property PACKAGE_PIN L13 [get_ports SPI_CS ]
+set_property PACKAGE_PIN K17 [get_ports SPI_MOSI ]
+set_property PACKAGE_PIN K18 [get_ports SPI_MISO ]
+set_property IOSTANDARD LVCMOS33 [get_ports SPI_CS ]
+set_property IOSTANDARD LVCMOS33 [get_ports SPI_MOSI ]
+set_property IOSTANDARD LVCMOS33 [get_ports SPI_MISO ]
+
+
+
+#set_property IOSTANDARD LVCMOS33 [get_ports {SPI_0_0_ss_io[0]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports SPI_0_0_io0_io]
+#set_property IOSTANDARD LVCMOS33 [get_ports SPI_0_0_io1_io]
+#set_property IOSTANDARD LVCMOS33 [get_ports SPI_0_0_io2_io]
+#set_property IOSTANDARD LVCMOS33 [get_ports SPI_0_0_io3_io]
+#set_property PACKAGE_PIN L13 [get_ports {SPI_0_0_ss_io[0]}]
+#set_property PACKAGE_PIN K17 [get_ports SPI_0_0_io0_io]
+#set_property PACKAGE_PIN K18 [get_ports SPI_0_0_io1_io]
+#set_property PACKAGE_PIN L14 [get_ports SPI_0_0_io2_io]
+#set_property PACKAGE_PIN M14 [get_ports SPI_0_0_io3_io]

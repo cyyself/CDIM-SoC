@@ -9,10 +9,22 @@ SoC for CQU Dual Issue Machine
 ## Devices on the SoC
 
 - 128M DDR2 MIG
-- 256K BRAM for U-Boot
+- SPI Flash Controller (from Loongson)
 - AXI Ethernet Lite
 - CONFREG (Used for Real-time Clock)
 - AXI Interrupt Controller (Convert rising edge IRQ from AXI Ethernet lite to active high level IRQ for CPU)
+
+## Program FSBL to SPI Flash
+
+Since only 256KB BRAM consumes 50% BRAM of 7a100T FPGA. The FSBL (First Stage Bootloader) in this SoC stores in onboard SPI Flash instead of FPGA BRAM in the NSCSCC board.
+
+You need to program the Flash by the following steps:
+
+1. Goto **Hardware Manager** in Vivado.
+2. Connect your board and open target.
+3. Right click **xc7a100t_0**, enter **Add Configuration Memory Device**.
+4. Select **s25fl128sxxxxxx0-spi-x1_x2_x4**.
+5. Program the flash by `u-boot.bin`.
 
 ## Related resources
 
@@ -33,3 +45,13 @@ SoC for CQU Dual Issue Machine
     This problem can be checked by `cat /proc/interrupts` and check whether the eth0 interrupt count is zero.
 
     If this option is enabled automatically by Vivado Block Design, you should manually disable this option.
+
+- Can I replace godson spi with Xilinx AXI Quad SPI?
+
+    I tried but failed.
+    
+    In Standard mode, the first read request will return 0xf response. But it seems normal from the second request.
+
+    In Dual mode, the first read request will return 0x0 response. But it seems normal from the second request.
+
+    In Quad mode, all read request will return 0xc response.
